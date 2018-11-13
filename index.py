@@ -8,8 +8,12 @@ bot = telebot.TeleBot("746612461:AAHHnGHEFbyBzIWnte6rG40vZWFmqmnb1Pg")
 def handle_text(message):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
     user_markup.row("/start", "/stop")
-    user_markup.row("Lab 01")
     bot.send_message(message.from_user.id, "Добро пожаловать...", reply_markup = user_markup)
+
+    markup = telebot.types.InlineKeyboardMarkup()
+    markup.add(telebot.types.InlineKeyboardButton("Google", url="http://www.google.com"))
+    markup.add(telebot.types.InlineKeyboardButton("Yahoo", url="http://www.yahoo.com"))
+    bot.send_message(message.from_user.id, "Ссылки", reply_markup = markup)
 
 @bot.message_handler(content_types = ['Lab 01'])
 def handle_text(message):
