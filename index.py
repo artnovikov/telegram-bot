@@ -4,16 +4,34 @@ import urllib.request as urllib2
 
 bot = telebot.TeleBot("746612461:AAHHnGHEFbyBzIWnte6rG40vZWFmqmnb1Pg")
 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+
 @bot.message_handler(commands = ['start'])
 def handle_text(message):
-    user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
-    user_markup.row("/start", "/stop")
+    user_markup = telebot.types.ReplyKeyboardMarkup()
+    user_markup.row("/start", "Exit")
     user_markup.row("Lab 01")
     user_markup.row("Lab 02")
     user_markup.row("Lab 03")
     user_markup.row("Lab 04")
     user_markup.row("Lab 05")
     bot.send_message(message.from_user.id, "Добро пожаловать...", reply_markup = user_markup)
+
+################################################################################################################
+################################################################################################################
+################################################################################################################
+
+@bot.message_handler(content_types = ['text'])
+def handle_text(message):
+    if message.text == "Exit":
+        hide_markup = telebot.types.ReplyKeyboardRemove() # Нет такой функции
+        bot.send_message(message.from_user.id, "...", reply_markup = hide_markup)
+
+################################################################################################################
+################################################################################################################
+################################################################################################################
 
 @bot.message_handler(content_types = ['text'])
 def handle_text(message):
@@ -23,7 +41,26 @@ def handle_text(message):
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", callback_data="lab_01_variant_02"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", callback_data="lab_01_variant_03"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_04"))
+
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", callback_data="lab_01_variant_05"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", callback_data="lab_01_variant_06"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", callback_data="lab_01_variant_07"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_08"))
+
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", callback_data="lab_01_variant_09"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", callback_data="lab_01_variant_10"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", callback_data="lab_01_variant_11"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_12"))
+
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", callback_data="lab_01_variant_13"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", callback_data="lab_01_variant_14"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", callback_data="lab_01_variant_15"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_16"))
         bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
+
+################################################################################################################
+################################################################################################################
+################################################################################################################
 
 @bot.callback_query_handler(func=lambda call:True)
 def call_back_payment(call):
@@ -35,7 +72,7 @@ def call_back_payment(call):
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
         document.close()
-        bot.send_message(call.message.chat.id, call.data)
+        bot.send_message(call.message.chat.id, "")
     # Lab 01/Variant 02
     elif call.data == "Lab 01/Variant 02":
         url = 'https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu'
@@ -157,31 +194,8 @@ def call_back_payment(call):
         bot.send_document(message.from_user.id, document)
         document.close()
 
-@bot.message_handler(commands = ['stop'])
-def handle_text(message):
-    hide_markup = telebot.types.ReplyKeyboardRemove() # Нет такой функции
-    bot.send_message(message.from_user.id, "...", reply_markup = hide_markup)
-
-@bot.message_handler(content_types = ['text'])
-def handle_text(message):
-    # Lab 01/Variant 01
-    if message.text == "Lab 01/Variant 01":
-        url = 'https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb'
-        urllib2.urlretrieve(url, "Lab 01 variant 01.rar")
-        document = open("Lab 01 variant 01.rar", "rb")
-        bot.send_chat_action(message.from_user.id, "upload_document")
-        bot.send_document(message.from_user.id, document)
-        document.close()
-    # Lab 01/Variant 02
-    elif message.text == "Lab 01/Variant 02":
-        url = 'https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu'
-        urllib2.urlretrieve(url, "Lab 01 variant 02.rar")
-        document = open("Lab 01 variant 02.rar", "rb")
-        bot.send_chat_action(message.from_user.id, "upload_document")
-        bot.send_document(message.from_user.id, document)
-        document.close()
-    
-
+################################################################################################################
+################################################################################################################
 ################################################################################################################
 
 print(bot.get_me())
