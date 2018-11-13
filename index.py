@@ -8,6 +8,13 @@ bot = telebot.TeleBot("746612461:AAHHnGHEFbyBzIWnte6rG40vZWFmqmnb1Pg")
 def handle_text(message):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
     user_markup.row("/start", "/stop")
+    user_markup.row("Lab 01")
+    bot.send_message(message.from_user.id, "Добро пожаловать...", reply_markup = user_markup)
+
+@bot.message_handler(content_types = ['Lab 01'])
+def handle_text(message):
+    user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
+    user_markup.row("Back")
     user_markup.row("Lab 01/Variant 01")
     user_markup.row("Lab 01/Variant 02")
     user_markup.row("Lab 01/Variant 03")
@@ -24,7 +31,12 @@ def handle_text(message):
     user_markup.row("Lab 01/Variant 14")
     user_markup.row("Lab 01/Variant 15")
     user_markup.row("Lab 01/Variant 16")
-    bot.send_message(message.from_user.id, "Добро пожаловать...", reply_markup = user_markup)
+
+@bot.message_handler(content_types = ['Back'])
+def handle_text(message):
+    user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
+    user_markup.row("/start", "/stop")
+    user_markup.row("Lab 01")
 
 #@bot.message_handler(commands = ['stop'])
 #def handle_text(message):
