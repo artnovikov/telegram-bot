@@ -25,10 +25,10 @@ def handle_text(message):
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_04"))
         bot.send_message(message.from_user.id, "Ссылки", reply_markup = markup)
 
-#@bot.callback_query_handler(function=lambda callable:True)
-#def call_back_payment(call):
-#    if call.data == "lab_01_variant_01":
-#        bot.send_message(call.message.chat.id, text = "Наличная  оплата, производиться в рублях, в кассе мегазина", reply_markup = markup)
+@bot.callback_query_handler(func=lambda call:true)
+def call_back_payment(call):
+    if call.data == "lab_01_variant_01":
+        bot.send_message(call.message.chat.id, text = "Наличная  оплата, производиться в рублях, в кассе мегазина", reply_markup = markup)
 
 @bot.message_handler(commands = ['stop'])
 def handle_text(message):
