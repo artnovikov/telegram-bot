@@ -23,7 +23,7 @@ def handle_text(message):
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", callback_data="lab_01_variant_02"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", callback_data="lab_01_variant_03"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_04"))
-        bot.send_message(message.from_user.id, "Ссылки", reply_markup = markup)
+        bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
 
 @bot.callback_query_handler(func=lambda call:True)
 def call_back_payment(call):
@@ -32,8 +32,8 @@ def call_back_payment(call):
         url = 'https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb'
         urllib2.urlretrieve(url, "Lab 01 variant 01.rar")
         document = open("Lab 01 variant 01.rar", "rb")
-        bot.send_chat_action(message.from_user.id, "upload_document")
-        bot.send_document(message.from_user.id, document)
+        bot.send_chat_action(call.from_user.id, "upload_document")
+        bot.send_document(call.from_user.id, document)
         document.close()
         bot.send_message(call.message.chat.id, call.data)
     # Lab 01/Variant 02
