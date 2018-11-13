@@ -15,12 +15,15 @@ def handle_text(message):
     user_markup.row("Lab 05")
     bot.send_message(message.from_user.id, "Добро пожаловать...", reply_markup = user_markup)
 
-@bot.message_handler(content_types = ['Lab 01'])
+@bot.message_handler(content_types = ['text'])
 def handle_text(message):
-    markup = telebot.types.InlineKeyboardMarkup()
-    markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", url="https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb"))
-    markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", url="https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu"))
-    bot.send_message(message.from_user.id, "Ссылки")
+    if message.text == "Lab 01/Variant 01":
+        markup = telebot.types.InlineKeyboardMarkup()
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", url="https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", url="https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", url="https://drive.google.com/uc?export=download&id=1ZJpEGukVXwEXOHznV68FZ12sVW-IAWF7"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", url="https://drive.google.com/uc?export=download&id=1TPPDnjGRqqOUXoHLhS1xQQVc5qWAXUlK"))
+        bot.send_message(message.from_user.id, "Ссылки", reply_markup = markup)
 
     #user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     #user_markup.row("Back")
