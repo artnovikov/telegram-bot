@@ -38,10 +38,10 @@ def handle_text(message):
     user_markup.row("/start", "/stop")
     user_markup.row("Lab 01")
 
-#@bot.message_handler(commands = ['stop'])
-#def handle_text(message):
-    #hide_markup = telebot.types.ReplyKeyboardHide() # Нет такой функции
-    #bot.send_message(message.from_user.id, "...", reply_markup = hide_markup)
+@bot.message_handler(commands = ['stop'])
+def handle_text(message):
+    hide_markup = telebot.types.ReplyKeyboardRemove() # Нет такой функции
+    bot.send_message(message.from_user.id, "...", reply_markup = hide_markup)
 
 @bot.message_handler(content_types = ['text'])
 def handle_text(message):
