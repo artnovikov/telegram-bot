@@ -20,7 +20,7 @@ def handle_text(message):
     markup = telebot.types.InlineKeyboardMarkup()
     markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", url="https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb"))
     markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", url="https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu"))
-    bot.send_message(message.from_user.id, "Ссылки", reply_markup = markup)
+    bot.send_message(message.from_user.id, "Ссылки")
 
     #user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     #user_markup.row("Back")
