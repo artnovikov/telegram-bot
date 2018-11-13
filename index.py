@@ -17,7 +17,7 @@ def handle_text(message):
 
 @bot.message_handler(content_types = ['text'])
 def handle_text(message):
-    if message.text == "Lab 01/Variant 01":
+    if message.text == "Lab 01":
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", callback_data="lab_01_variant_01"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", callback_data="lab_01_variant_02"))
