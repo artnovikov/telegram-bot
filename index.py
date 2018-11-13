@@ -25,30 +25,10 @@ def handle_text(message):
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_04"))
         bot.send_message(message.from_user.id, "Ссылки", reply_markup = markup)
 
-    #user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
-    #user_markup.row("Back")
-    #user_markup.row("Lab 01/Variant 01")
-    #user_markup.row("Lab 01/Variant 02")
-    #user_markup.row("Lab 01/Variant 03")
-    #user_markup.row("Lab 01/Variant 04")
-    #user_markup.row("Lab 01/Variant 05")
-    #user_markup.row("Lab 01/Variant 06")
-    #user_markup.row("Lab 01/Variant 07")
-    #user_markup.row("Lab 01/Variant 08")
-    #user_markup.row("Lab 01/Variant 09")
-    #user_markup.row("Lab 01/Variant 10")
-    #user_markup.row("Lab 01/Variant 11")
-    #user_markup.row("Lab 01/Variant 12")
-    #user_markup.row("Lab 01/Variant 13")
-    #user_markup.row("Lab 01/Variant 14")
-    #user_markup.row("Lab 01/Variant 15")
-    #user_markup.row("Lab 01/Variant 16")
-
-@bot.message_handler(content_types = ['Back'])
-def handle_text(message):
-    user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
-    user_markup.row("/start", "/stop")
-    user_markup.row("Lab 01")
+@bot.callback_query_handler(function=lambda callable:True)
+def call_back_payment(call):
+    if call.data == "lab_01_variant_01":
+        bot.send_message(call.message.chat.id, text = "Наличная  оплата, производиться в рублях, в кассе мегазина", reply_markup = markup)
 
 @bot.message_handler(commands = ['stop'])
 def handle_text(message):
