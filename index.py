@@ -19,10 +19,10 @@ def handle_text(message):
 def handle_text(message):
     if message.text == "Lab 01/Variant 01":
         markup = telebot.types.InlineKeyboardMarkup()
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", url="https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", url="https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", url="https://drive.google.com/uc?export=download&id=1ZJpEGukVXwEXOHznV68FZ12sVW-IAWF7"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", url="https://drive.google.com/uc?export=download&id=1TPPDnjGRqqOUXoHLhS1xQQVc5qWAXUlK"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", callback_data="lab_01_variant_01"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", callback_data="lab_01_variant_02"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", callback_data="lab_01_variant_03"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_04"))
         bot.send_message(message.from_user.id, "Ссылки", reply_markup = markup)
 
     #user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
