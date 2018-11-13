@@ -27,8 +27,8 @@ def handle_text(message):
 
 @bot.callback_query_handler(func=lambda call:True)
 def call_back_payment(call):
-    #if call.data == "lab_01_variant_01":
-    bot.send_message(call.message.chat.id, call.data, reply_markup = markup)
+    if call.data == "lab_01_variant_01":
+        bot.send_message(call.message.chat.id, call.data)
 
 @bot.message_handler(commands = ['stop'])
 def handle_text(message):
