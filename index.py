@@ -72,7 +72,6 @@ def call_back_payment(call):
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
         document.close()
-        bot.send_message(call.message.chat.id, "")
     # Lab 01/Variant 02
     elif call.data == "lab_01_variant_02":
         url = 'https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu'
