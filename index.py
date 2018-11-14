@@ -192,7 +192,6 @@ def call_back_payment(call):
         bot.send_chat_action(message.from_user.id, "upload_document")
         bot.send_document(message.from_user.id, document)
         document.close()
-
     # Lab 02
     # Lab 02/Variant 01
     elif call.data == "lab_02_variant_01":
