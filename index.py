@@ -13,8 +13,7 @@ def handle_text(message):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     user_markup.row("Exit")
     user_markup.row("Lab 01")
-    user_markup.row("Lab 02")
-	user_markup.row("Lab 03")
+    user_markup.row("Lab 02", "Lab 03")
     bot.send_message(message.from_user.id, "Hello, we're glad to c u. Please select lab number.", reply_markup = user_markup)
 
 ################################################################################################################
