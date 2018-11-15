@@ -13,7 +13,8 @@ def handle_text(message):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     user_markup.row("Exit")
     user_markup.row("Lab 01")
-    user_markup.row("Lab 02", "Lab 03")
+    user_markup.row("Lab 02")
+    user_markup.row("Lab 03")
     bot.send_message(message.from_user.id, "Hello, we're glad to c u. Please select lab number.", reply_markup = user_markup)
 
 ################################################################################################################
@@ -69,10 +70,10 @@ def handle_text(message):
         markup.add(telebot.types.InlineKeyboardButton("Lab 02/Variant 15", callback_data="lab_02_variant_15"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 02/Variant 16", callback_data="lab_02_variant_16"))
         bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
-	elif message.text == "Lab 03":
-		markup = telebot.types.InlineKeyboardMarkup()
-		markup.add(telebot.types.InlineKeyboardButton("Lab 03/Variant 01", callback_data="lab_03_variant_01"))
-		bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
+    elif message.text == "Laba 03":
+        markup = telebot.types.InlineKeyboardMarkup()
+        markup.add(telebot.types.InlineKeyboardButton("Lab 03/Variant 01", callback_data="lab_03_variant_01"))
+        bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
 
 ################################################################################################################
 ################################################################################################################
