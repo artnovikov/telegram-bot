@@ -84,7 +84,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 01.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 02
     elif call.data == "lab_01_variant_02":
@@ -93,7 +92,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 02.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 03
     elif call.data == "lab_01_variant_03":
@@ -102,7 +100,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 03.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 04
     elif call.data == "lab_01_variant_04":
@@ -111,7 +108,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 04.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 05
     elif call.data == "lab_01_variant_05":
@@ -120,7 +116,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 05.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 06
     elif call.data == "lab_01_variant_06":
@@ -129,7 +124,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 06.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 07
     elif call.data == "lab_01_variant_07":
@@ -138,7 +132,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 07.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 08
     elif call.data == "lab_01_variant_08":
@@ -147,7 +140,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 08.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 09
     elif call.data == "lab_01_variant_09":
@@ -156,7 +148,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 09.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 10
     elif call.data == "lab_01_variant_10":
@@ -165,7 +156,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 10.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 11
     elif call.data == "lab_01_variant_11":
@@ -174,7 +164,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 11.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 12
     elif call.data == "lab_01_variant_12":
@@ -183,7 +172,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 12.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 13
     elif call.data == "lab_01_variant_13":
@@ -192,7 +180,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 13.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 14
     elif call.data == "lab_01_variant_14":
@@ -201,7 +188,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 14.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 15
     elif call.data == "lab_01_variant_15":
@@ -210,7 +196,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 15.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 01/Variant 16
     elif call.data == "lab_01_variant_16":
@@ -219,7 +204,6 @@ def call_back_payment(call):
         document = open("Lab 01 variant 16.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02
     # Lab 02/Variant 01
@@ -229,7 +213,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 01.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 02
     elif call.data == "lab_02_variant_02":
@@ -238,7 +221,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 02.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 03
     elif call.data == "lab_02_variant_03":
@@ -247,7 +229,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 03.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 04
     elif call.data == "lab_02_variant_04":
@@ -256,7 +237,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 04.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 05
     elif call.data == "lab_02_variant_05":
@@ -265,7 +245,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 05.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 06
     elif call.data == "lab_02_variant_06":
@@ -274,7 +253,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 06.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 07
     elif call.data == "lab_02_variant_07":
@@ -283,7 +261,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 07.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 08
     elif call.data == "lab_02_variant_08":
@@ -292,7 +269,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 08.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 09
     elif call.data == "lab_02_variant_09":
@@ -301,7 +277,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 09.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 10
     elif call.data == "lab_02_variant_10":
@@ -310,7 +285,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 10.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 11
     elif call.data == "lab_02_variant_11":
@@ -319,7 +293,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 11.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 12
     elif call.data == "lab_02_variant_12":
@@ -328,7 +301,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 12.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 13
     elif call.data == "lab_02_variant_13":
@@ -337,7 +309,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 13.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 14
     elif call.data == "lab_02_variant_14":
@@ -346,7 +317,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 14.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 15
     elif call.data == "lab_02_variant_15":
@@ -355,7 +325,6 @@ def call_back_payment(call):
         document = open("Lab 02 variant 15.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
     # Lab 02/Variant 16
     elif call.data == "lab_02_variant_16":
@@ -364,8 +333,8 @@ def call_back_payment(call):
         document = open("Lab 02 variant 16.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
         document.close()
+		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
 
 ################################################################################################################
 ################################################################################################################
