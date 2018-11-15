@@ -69,11 +69,6 @@ def handle_text(message):
         markup.add(telebot.types.InlineKeyboardButton("Lab 02/Variant 15", callback_data="lab_02_variant_15"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 02/Variant 16", callback_data="lab_02_variant_16"))
         bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
-	elif message.text == "Lab 03":
-        markup = telebot.types.InlineKeyboardMarkup()
-        markup.add(telebot.types.InlineKeyboardButton("Lab 03/Variant 01", callback_data="lab_03_variant_01"))
-		markup.add(telebot.types.InlineKeyboardButton("Lab 03/Variant 03", callback_data="lab_03_variant_03"))
-		bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
 
 ################################################################################################################
 ################################################################################################################
@@ -339,23 +334,6 @@ def call_back_payment(call):
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
         document.close()
-	# Lab 03
-    # Lab 03/Variant 01
-    # elif call.data == "lab_03_variant_01":
-        # url = 'https://drive.google.com/uc?export=download&id=1KrtKdVH-jkoqg--xsc5ZQVmc6K45QNQR'
-        # urllib2.urlretrieve(url, "Lab 03 variant 01.rar")
-        # document = open("Lab 03 variant 01.rar", "rb")
-        # bot.send_chat_action(call.from_user.id, "upload_document")
-        # bot.send_document(call.from_user.id, document)
-        # document.close()
-	# Lab 03/Variant 03
-    # elif call.data == "lab_03_variant_03":
-        # url = 'https://drive.google.com/uc?export=download&id=1evOuMMTzkrtcGqhH6ePSpiGX1bbiBZd-'
-        # urllib2.urlretrieve(url, "Lab 03 variant 03.rar")
-        # document = open("Lab 03 variant 03.rar", "rb")
-        # bot.send_chat_action(call.from_user.id, "upload_document")
-        # bot.send_document(call.from_user.id, document)
-        # document.close()
 
 ################################################################################################################
 ################################################################################################################
