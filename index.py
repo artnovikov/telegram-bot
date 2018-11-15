@@ -10,8 +10,8 @@ bot = telebot.TeleBot("746612461:AAHHnGHEFbyBzIWnte6rG40vZWFmqmnb1Pg")
 
 @bot.message_handler(commands = ['start'])
 def handle_text(message):
-    user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
-    user_markup.row("/start", "Exit")
+    user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
+    user_markup.row("Exit")
     user_markup.row("Lab 01")
     user_markup.row("Lab 02")
     bot.send_message(message.from_user.id, "welcome...", reply_markup = user_markup)
@@ -345,25 +345,7 @@ def log(message, answer):
     print("\n ------")
     from datetime import datetime
     print(datetime.now())
-    print("Сообщение от {0} {1}. (id = {2}) \n Текст - {3})" . format(message.from_user.first_name,
-                                                                     message.from_user.last_name,
-                                                                     str(message.from_user.id),
-                                                                     message.text))
+    print("Сообщение от {0} {1}. (id = {2}) \n Текст - {3})" . format(message.from_user.first_name, message.from_user.last_name, str(message.from_user.id), message.text))
     print(answer)
-
-@bot.message_handler(commands = ['help'])
-def handle_text(message):
-    bot.send_message(message.chat.id, "Мои возможности весьма специфичны. Но, ты только посмотри! Все работает!")
-
-@bot.message_handler(content_types = ['text'])
-def handle_text(message):
-    if message.text == "a":
-        answer = "b"
-        log(message, answer)
-        bot.send_message(message.chat.id, answer)
-    elif message.text == "b":
-        answer = "c"
-        log(message, answer)
-        bot.send_message(message.chat.id, answer)
 
 bot.polling(none_stop = True, interval = 0)
