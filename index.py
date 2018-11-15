@@ -341,21 +341,21 @@ def call_back_payment(call):
         document.close()
 	# Lab 03
     # Lab 03/Variant 01
-    elif call.data == "lab_03_variant_01":
-        url = 'https://drive.google.com/uc?export=download&id=1KrtKdVH-jkoqg--xsc5ZQVmc6K45QNQR'
-        urllib2.urlretrieve(url, "Lab 03 variant 01.rar")
-        document = open("Lab 03 variant 01.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+    # elif call.data == "lab_03_variant_01":
+        # url = 'https://drive.google.com/uc?export=download&id=1KrtKdVH-jkoqg--xsc5ZQVmc6K45QNQR'
+        # urllib2.urlretrieve(url, "Lab 03 variant 01.rar")
+        # document = open("Lab 03 variant 01.rar", "rb")
+        # bot.send_chat_action(call.from_user.id, "upload_document")
+        # bot.send_document(call.from_user.id, document)
+        # document.close()
 	# Lab 03/Variant 03
-    elif call.data == "lab_03_variant_03":
-        url = 'https://drive.google.com/uc?export=download&id=1evOuMMTzkrtcGqhH6ePSpiGX1bbiBZd-'
-        urllib2.urlretrieve(url, "Lab 03 variant 03.rar")
-        document = open("Lab 03 variant 03.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+    # elif call.data == "lab_03_variant_03":
+        # url = 'https://drive.google.com/uc?export=download&id=1evOuMMTzkrtcGqhH6ePSpiGX1bbiBZd-'
+        # urllib2.urlretrieve(url, "Lab 03 variant 03.rar")
+        # document = open("Lab 03 variant 03.rar", "rb")
+        # bot.send_chat_action(call.from_user.id, "upload_document")
+        # bot.send_document(call.from_user.id, document)
+        # document.close()
 
 ################################################################################################################
 ################################################################################################################
