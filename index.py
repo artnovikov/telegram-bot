@@ -334,7 +334,6 @@ def call_back_payment(call):
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
         document.close()
-		bot.send_message(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
 
 ################################################################################################################
 ################################################################################################################
