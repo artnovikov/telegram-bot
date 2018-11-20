@@ -93,215 +93,82 @@ def call_back_payment(call):
     # Lab 01/Variant 01
     if call.data == "lab_01_variant_01":
         download_lab("01", "01", "1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb", call.from_user.id)
-        #url = 'https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb'
-        #urllib2.urlretrieve(url, "Lab 01 variant 01.rar")
-        #document = open("Lab 01 variant 01.rar", "rb")
-        #bot.send_chat_action(call.from_user.id, "upload_document")
-        #bot.send_document(call.from_user.id, document)
-        #document.close()
     # Lab 01/Variant 02
     elif call.data == "lab_01_variant_02":
         download_lab("01", "02", "188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu", call.from_user.id)
-        #url = 'https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu'
-        #urllib2.urlretrieve(url, "Lab 01 variant 02.rar")
-        #document = open("Lab 01 variant 02.rar", "rb")
-        #bot.send_chat_action(call.from_user.id, "upload_document")
-        #bot.send_document(call.from_user.id, document)
-        #document.close()
     # Lab 01/Variant 03
     elif call.data == "lab_01_variant_03":
         download_lab("01", "03", "1ZJpEGukVXwEXOHznV68FZ12sVW-IAWF7", call.from_user.id)
-        #url = 'https://drive.google.com/uc?export=download&id=1ZJpEGukVXwEXOHznV68FZ12sVW-IAWF7'
-        #urllib2.urlretrieve(url, "Lab 01 variant 03.rar")
-        #document = open("Lab 01 variant 03.rar", "rb")
-        #bot.send_chat_action(call.from_user.id, "upload_document")
-        #bot.send_document(call.from_user.id, document)
-        #document.close()
     # Lab 01/Variant 04
     elif call.data == "lab_01_variant_04":
-        url = 'https://drive.google.com/uc?export=download&id=1TPPDnjGRqqOUXoHLhS1xQQVc5qWAXUlK'
-        urllib2.urlretrieve(url, "Lab 01 variant 04.rar")
-        document = open("Lab 01 variant 04.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "04", "1TPPDnjGRqqOUXoHLhS1xQQVc5qWAXUlK", call.from_user.id)
     # Lab 01/Variant 05
     elif call.data == "lab_01_variant_05":
-        url = 'https://drive.google.com/uc?export=download&id=1cKjD758MgPB23X_I3E0SHAJdW9cRqTSK'
-        urllib2.urlretrieve(url, "Lab 01 variant 05.rar")
-        document = open("Lab 01 variant 05.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "05", "1cKjD758MgPB23X_I3E0SHAJdW9cRqTSK", call.from_user.id)
     # Lab 01/Variant 06
     elif call.data == "lab_01_variant_06":
-        url = 'https://drive.google.com/uc?export=download&id=14ySKjBfEdlNpQQd1FO-j5CcyTg4911v3'
-        urllib2.urlretrieve(url, "Lab 01 variant 06.rar")
-        document = open("Lab 01 variant 06.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "06", "14ySKjBfEdlNpQQd1FO-j5CcyTg4911v3", call.from_user.id)
     # Lab 01/Variant 07
     elif call.data == "lab_01_variant_07":
-        url = 'https://drive.google.com/uc?export=download&id=15MUW7gwWtnvzs-ziKcDf-Kkwz5NexdZZ'
-        urllib2.urlretrieve(url, "Lab 01 variant 07.rar")
-        document = open("Lab 01 variant 07.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "07", "15MUW7gwWtnvzs-ziKcDf-Kkwz5NexdZZ", call.from_user.id)
     # Lab 01/Variant 08
     elif call.data == "lab_01_variant_08":
-        url = 'https://drive.google.com/uc?export=download&id=1SBeSDrFF_u8JQzatCq-3GSau5v4rgfIp'
-        urllib2.urlretrieve(url, "Lab 01 variant 08.rar")
-        document = open("Lab 01 variant 08.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "08", "1SBeSDrFF_u8JQzatCq-3GSau5v4rgfIp", call.from_user.id)
     # Lab 01/Variant 09
     elif call.data == "lab_01_variant_09":
-        url = 'https://drive.google.com/uc?export=download&id=1rVXB6a8E2l6NLPUekwFSUmqN-mFZ-vI1'
-        urllib2.urlretrieve(url, "Lab 01 variant 09.rar")
-        document = open("Lab 01 variant 09.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "09", "1rVXB6a8E2l6NLPUekwFSUmqN-mFZ-vI1", call.from_user.id)
     # Lab 01/Variant 10
     elif call.data == "lab_01_variant_10":
-        url = 'https://drive.google.com/uc?export=download&id=1ZqE9-wvT3vR4y7qQ2XgRKlmZGgfkM6Rv'
-        urllib2.urlretrieve(url, "Lab 01 variant 10.rar")
-        document = open("Lab 01 variant 10.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "10", "1ZqE9-wvT3vR4y7qQ2XgRKlmZGgfkM6Rv", call.from_user.id)
     # Lab 01/Variant 11
     elif call.data == "lab_01_variant_11":
-        url = 'https://drive.google.com/uc?export=download&id=1Sh7GhCNDNuWeM37apZZesSMVGOvKe8Al'
-        urllib2.urlretrieve(url, "Lab 01 variant 11.rar")
-        document = open("Lab 01 variant 11.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "11", "1Sh7GhCNDNuWeM37apZZesSMVGOvKe8Al", call.from_user.id)
     # Lab 01/Variant 12
     elif call.data == "lab_01_variant_12":
-        url = 'https://drive.google.com/uc?export=download&id=10CSSOzpD1blWf3LDTJx1YTcLmhH-ssZW'
-        urllib2.urlretrieve(url, "Lab 01 variant 12.rar")
-        document = open("Lab 01 variant 12.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "12", "10CSSOzpD1blWf3LDTJx1YTcLmhH-ssZW", call.from_user.id)
     # Lab 01/Variant 13
     elif call.data == "lab_01_variant_13":
-        url = 'https://drive.google.com/uc?export=download&id=1KdB1AlaMkQoK1Sgt2BHDDB6iLYTgavWR'
-        urllib2.urlretrieve(url, "Lab 01 variant 13.rar")
-        document = open("Lab 01 variant 13.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "13", "1KdB1AlaMkQoK1Sgt2BHDDB6iLYTgavWR", call.from_user.id)
     # Lab 01/Variant 14
     elif call.data == "lab_01_variant_14":
-        url = 'https://drive.google.com/uc?export=download&id=1fHHsuV5lhAkj6DJEz1I2sDzWaWlhbrrk'
-        urllib2.urlretrieve(url, "Lab 01 variant 14.rar")
-        document = open("Lab 01 variant 14.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "14", "1fHHsuV5lhAkj6DJEz1I2sDzWaWlhbrrk", call.from_user.id)
     # Lab 01/Variant 15
     elif call.data == "lab_01_variant_15":
-        url = 'https://drive.google.com/uc?export=download&id=1hZQTMAvnFr04DG3i0nz92ZlMHL-3ZfVY'
-        urllib2.urlretrieve(url, "Lab 01 variant 15.rar")
-        document = open("Lab 01 variant 15.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "15", "1hZQTMAvnFr04DG3i0nz92ZlMHL-3ZfVY", call.from_user.id)
     # Lab 01/Variant 16
     elif call.data == "lab_01_variant_16":
-        url = 'https://drive.google.com/uc?export=download&id=1UGdickb9FtuP6qgbd64MgTCb_Y96VfGc'
-        urllib2.urlretrieve(url, "Lab 01 variant 16.rar")
-        document = open("Lab 01 variant 16.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "16", "1UGdickb9FtuP6qgbd64MgTCb_Y96VfGc", call.from_user.id)
     # Lab 02
     # Lab 02/Variant 01
     elif call.data == "lab_02_variant_01":
-        url = 'https://drive.google.com/uc?export=download&id=1vMHCfk2b7txtqeKU0vs8Wq70zd2GOl2s'
-        urllib2.urlretrieve(url, "Lab 02 variant 01.rar")
-        document = open("Lab 02 variant 01.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "01", "1vMHCfk2b7txtqeKU0vs8Wq70zd2GOl2s", call.from_user.id)
     # Lab 02/Variant 02
     elif call.data == "lab_02_variant_02":
-        url = 'https://drive.google.com/uc?export=download&id=1gz0iGuJp0Do4ALtoQd_BPVk99LUyahb3'
-        urllib2.urlretrieve(url, "Lab 02 variant 02.rar")
-        document = open("Lab 02 variant 02.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "02", "1gz0iGuJp0Do4ALtoQd_BPVk99LUyahb3", call.from_user.id)
     # Lab 02/Variant 03
     elif call.data == "lab_02_variant_03":
-        url = 'https://drive.google.com/uc?export=download&id=1ikLuJiqW-Hp_TjyNdkZl8SArnwJWLyws'
-        urllib2.urlretrieve(url, "Lab 02 variant 03.rar")
-        document = open("Lab 02 variant 03.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "03", "1ikLuJiqW-Hp_TjyNdkZl8SArnwJWLyws", call.from_user.id)
     # Lab 02/Variant 04
     elif call.data == "lab_02_variant_04":
-        url = 'https://drive.google.com/uc?export=download&id=1c597BFu770wqOqg7mVKEN1-O2AtLWknv'
-        urllib2.urlretrieve(url, "Lab 02 variant 04.rar")
-        document = open("Lab 02 variant 04.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "04", "1c597BFu770wqOqg7mVKEN1-O2AtLWknv", call.from_user.id)
     # Lab 02/Variant 05
     elif call.data == "lab_02_variant_05":
-        url = 'https://drive.google.com/uc?export=download&id=1uV-Gi8eTFg9kwmAvBzbz-DD1jjxgyks9'
-        urllib2.urlretrieve(url, "Lab 02 variant 05.rar")
-        document = open("Lab 02 variant 05.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "05", "1uV-Gi8eTFg9kwmAvBzbz-DD1jjxgyks9", call.from_user.id)
     # Lab 02/Variant 06
     elif call.data == "lab_02_variant_06":
-        url = 'https://drive.google.com/uc?export=download&id=1spRtb7fFlHhNjxaXjDrOkI7PoSsoSXxh'
-        urllib2.urlretrieve(url, "Lab 02 variant 06.rar")
-        document = open("Lab 02 variant 06.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "06", "1spRtb7fFlHhNjxaXjDrOkI7PoSsoSXxh", call.from_user.id)
     # Lab 02/Variant 07
     elif call.data == "lab_02_variant_07":
-        url = 'https://drive.google.com/uc?export=download&id=1Udnv9wct-ath8BsDOVtI06AwOhF7aWmj'
-        urllib2.urlretrieve(url, "Lab 02 variant 07.rar")
-        document = open("Lab 02 variant 07.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "07", "1Udnv9wct-ath8BsDOVtI06AwOhF7aWmj", call.from_user.id)
     # Lab 02/Variant 08
     elif call.data == "lab_02_variant_08":
-        url = 'https://drive.google.com/uc?export=download&id=15QL-VO1m8_2EHh9Uc-ZKU0isepL9y_8y'
-        urllib2.urlretrieve(url, "Lab 02 variant 08.rar")
-        document = open("Lab 02 variant 08.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "08", "15QL-VO1m8_2EHh9Uc-ZKU0isepL9y_8y", call.from_user.id)
     # Lab 02/Variant 09
     elif call.data == "lab_02_variant_09":
-        url = 'https://drive.google.com/uc?export=download&id=1nPYSWsuCLExEg6JCnwtWNNQ_1-AWCT6L'
-        urllib2.urlretrieve(url, "Lab 02 variant 09.rar")
-        document = open("Lab 02 variant 09.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "09", "1nPYSWsuCLExEg6JCnwtWNNQ_1-AWCT6L", call.from_user.id)
     # Lab 02/Variant 10
     elif call.data == "lab_02_variant_10":
-        url = 'https://drive.google.com/uc?export=download&id=10Z5Xw4CIZ8By_aWDRMO5entgHCedXnzF'
-        urllib2.urlretrieve(url, "Lab 02 variant 10.rar")
-        document = open("Lab 02 variant 10.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("02", "10", "10Z5Xw4CIZ8By_aWDRMO5entgHCedXnzF", call.from_user.id)
     # Lab 02/Variant 11
     elif call.data == "lab_02_variant_11":
         url = 'https://drive.google.com/uc?export=download&id=13uMpuYW7__3iO4prnJGLBNKAzW9VqFMW'
