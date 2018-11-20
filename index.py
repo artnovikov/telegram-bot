@@ -92,7 +92,7 @@ def call_back_payment(call):
     # Lab 01
     # Lab 01/Variant 01
     if call.data == "lab_01_variant_01":
-        download_labs("01", "01", "1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb")
+        download_lab("01", "01", "1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb")
         #url = 'https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb'
         #urllib2.urlretrieve(url, "Lab 01 variant 01.rar")
         #document = open("Lab 01 variant 01.rar", "rb")
@@ -101,7 +101,7 @@ def call_back_payment(call):
         #document.close()
     # Lab 01/Variant 02
     elif call.data == "lab_01_variant_02":
-        download_labs("01", "02", "188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu")
+        download_lab("01", "02", "188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu")
         #url = 'https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu'
         #urllib2.urlretrieve(url, "Lab 01 variant 02.rar")
         #document = open("Lab 01 variant 02.rar", "rb")
@@ -110,12 +110,13 @@ def call_back_payment(call):
         #document.close()
     # Lab 01/Variant 03
     elif call.data == "lab_01_variant_03":
-        url = 'https://drive.google.com/uc?export=download&id=1ZJpEGukVXwEXOHznV68FZ12sVW-IAWF7'
-        urllib2.urlretrieve(url, "Lab 01 variant 03.rar")
-        document = open("Lab 01 variant 03.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_lab("01", "03", "1ZJpEGukVXwEXOHznV68FZ12sVW-IAWF7")
+        #url = 'https://drive.google.com/uc?export=download&id=1ZJpEGukVXwEXOHznV68FZ12sVW-IAWF7'
+        #urllib2.urlretrieve(url, "Lab 01 variant 03.rar")
+        #document = open("Lab 01 variant 03.rar", "rb")
+        #bot.send_chat_action(call.from_user.id, "upload_document")
+        #bot.send_document(call.from_user.id, document)
+        #document.close()
     # Lab 01/Variant 04
     elif call.data == "lab_01_variant_04":
         url = 'https://drive.google.com/uc?export=download&id=1TPPDnjGRqqOUXoHLhS1xQQVc5qWAXUlK'
