@@ -8,13 +8,21 @@ bot = telebot.TeleBot("746612461:AAHHnGHEFbyBzIWnte6rG40vZWFmqmnb1Pg")
 ################################################################################################################
 ################################################################################################################
 
+def download_lab(number_of_lab, number_of_variant, google_link):
+    url = 'https://drive.google.com/uc?export=download&id=' + google_link
+    urllib2.urlretrieve(url, "Lab " + number_of_lab + " variant " + number_of_variant + ".rar")
+    document = open("Lab " + number_of_lab + " variant " + number_of_variant + ".rar", "rb")
+    bot.send_chat_action(call.from_user.id, "upload_document")
+    bot.send_document(call.from_user.id, document)
+    document.close()
+
 @bot.message_handler(commands = ['start'])
 def handle_text(message):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     user_markup.row("Exit")
     user_markup.row("Lab 01")
     user_markup.row("Lab 02")
-    user_markup.row("Lab 03")
+    user_markup.row("Lab 05")
     bot.send_message(message.from_user.id, "Hello, we're glad to c u. Please select lab number.", reply_markup = user_markup)
 
 ################################################################################################################
@@ -30,23 +38,23 @@ def handle_text(message):
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 01", callback_data="lab_01_variant_01"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 02", callback_data="lab_01_variant_02"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", callback_data="lab_01_variant_03"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_04"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 03", callback_data="lab_01_variant_03"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 04", callback_data="lab_01_variant_04"))
 
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 05", callback_data="lab_01_variant_05"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 06", callback_data="lab_01_variant_06"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 07", callback_data="lab_01_variant_07"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 08", callback_data="lab_01_variant_08"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 05", callback_data="lab_01_variant_05"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 06", callback_data="lab_01_variant_06"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 07", callback_data="lab_01_variant_07"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 08", callback_data="lab_01_variant_08"))
 
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 09", callback_data="lab_01_variant_09"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 10", callback_data="lab_01_variant_10"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 11", callback_data="lab_01_variant_11"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 12", callback_data="lab_01_variant_12"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 09", callback_data="lab_01_variant_09"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 10", callback_data="lab_01_variant_10"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 11", callback_data="lab_01_variant_11"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 12", callback_data="lab_01_variant_12"))
 
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 13", callback_data="lab_01_variant_13"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 14", callback_data="lab_01_variant_14"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 15", callback_data="lab_01_variant_15"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 16", callback_data="lab_01_variant_16"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 13", callback_data="lab_01_variant_13"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 14", callback_data="lab_01_variant_14"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 15", callback_data="lab_01_variant_15"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 01/Variant 16", callback_data="lab_01_variant_16"))
         bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
     elif message.text == "Lab 02":
         markup = telebot.types.InlineKeyboardMarkup()
@@ -70,10 +78,9 @@ def handle_text(message):
         markup.add(telebot.types.InlineKeyboardButton("Lab 02/Variant 15", callback_data="lab_02_variant_15"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 02/Variant 16", callback_data="lab_02_variant_16"))
         bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
-    elif message.text == "Lab 03":
+    elif message.text == "Lab 05":
         markup = telebot.types.InlineKeyboardMarkup()
-        markup.add(telebot.types.InlineKeyboardButton("Lab 03/Variant 01", callback_data="lab_03_variant_01"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 03/Variant 03", callback_data="lab_03_variant_03"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 05/Variant 01", callback_data="lab_05_variant_01"))
         bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
 
 ################################################################################################################
@@ -85,20 +92,22 @@ def call_back_payment(call):
     # Lab 01
     # Lab 01/Variant 01
     if call.data == "lab_01_variant_01":
-        url = 'https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb'
-        urllib2.urlretrieve(url, "Lab 01 variant 01.rar")
-        document = open("Lab 01 variant 01.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_labs("01", "01", "1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb")
+        #url = 'https://drive.google.com/uc?export=download&id=1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb'
+        #urllib2.urlretrieve(url, "Lab 01 variant 01.rar")
+        #document = open("Lab 01 variant 01.rar", "rb")
+        #bot.send_chat_action(call.from_user.id, "upload_document")
+        #bot.send_document(call.from_user.id, document)
+        #document.close()
     # Lab 01/Variant 02
     elif call.data == "lab_01_variant_02":
-        url = 'https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu'
-        urllib2.urlretrieve(url, "Lab 01 variant 02.rar")
-        document = open("Lab 01 variant 02.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
+        download_labs("01", "02", "188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu")
+        #url = 'https://drive.google.com/uc?export=download&id=188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu'
+        #urllib2.urlretrieve(url, "Lab 01 variant 02.rar")
+        #document = open("Lab 01 variant 02.rar", "rb")
+        #bot.send_chat_action(call.from_user.id, "upload_document")
+        #bot.send_document(call.from_user.id, document)
+        #document.close()
     # Lab 01/Variant 03
     elif call.data == "lab_01_variant_03":
         url = 'https://drive.google.com/uc?export=download&id=1ZJpEGukVXwEXOHznV68FZ12sVW-IAWF7'
@@ -340,20 +349,12 @@ def call_back_payment(call):
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
         document.close()
-	# Lab 03
-	# Lab 03/Variant 01
-    elif call.data == "lab_03_variant_01":
-        url = 'https://drive.google.com/uc?export=download&id=1KrtKdVH-jkoqg--xsc5ZQVmc6K45QNQR'
-        urllib2.urlretrieve(url, "Lab 03 variant 01.rar")
-        document = open("Lab 03 variant 01.rar", "rb")
-        bot.send_chat_action(call.from_user.id, "upload_document")
-        bot.send_document(call.from_user.id, document)
-        document.close()
-    # Lab 03/Variant 03
-    elif call.data == "lab_03_variant_03":
-        url = 'https://drive.google.com/uc?export=download&id=1evOuMMTzkrtcGqhH6ePSpiGX1bbiBZd-'
-        urllib2.urlretrieve(url, "Lab 03 variant 03.rar")
-        document = open("Lab 03 variant 03.rar", "rb")
+	# Lab 05
+	# Lab 05/Variant 01
+    elif call.data == "lab_05_variant_01":
+        url = 'https://drive.google.com/uc?export=download&id=1JAr8CQ8HNjJDsZWrTQB0TptoaTqOFfMM'
+        urllib2.urlretrieve(url, "Lab 05 variant 01.rar")
+        document = open("Lab 05 variant 01.rar", "rb")
         bot.send_chat_action(call.from_user.id, "upload_document")
         bot.send_document(call.from_user.id, document)
         document.close()
