@@ -111,6 +111,7 @@ def call_back_payment(call):
     # Lab 01/Variant 01
     if call.data == "lab_01_variant_01":
         download_lab("01", "01", "1sd1snZ8-1IW9baKh6nL_1F1UQlvOB-sb", call.from_user.id)
+        bot.send_document(call.from_user.id, "If you find a bug or know how to improve the code, please contact us.")
     # Lab 01/Variant 02
     elif call.data == "lab_01_variant_02":
         download_lab("01", "02", "188aI7rh1lOWN5p7ouU0CvS_2wSbx5dPu", call.from_user.id)
