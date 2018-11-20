@@ -13,7 +13,7 @@ def download_lab(number_of_lab, number_of_variant, google_link, user_id):
     urllib2.urlretrieve(url, "Lab " + number_of_lab + " variant " + number_of_variant + ".rar")
     document = open("Lab " + number_of_lab + " variant " + number_of_variant + ".rar", "rb")
     bot.send_chat_action(user_id, "upload_document")
-    bot.send_document(user_id, "If you find a bug or know how to improve the code, please contact us.", document)
+    bot.send_document(user_id, document)
     document.close()
 
 @bot.message_handler(commands = ['start'])
