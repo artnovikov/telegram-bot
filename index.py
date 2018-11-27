@@ -15,7 +15,8 @@ def download_lab(number_of_lab, number_of_variant, google_link, user_id):
     bot.send_chat_action(user_id, "upload_document")
     bot.send_document(user_id, document)
     document.close()
-    bot.send_message(user_id, "Something...")
+    htmlhtml = "<a href=\"tg://user?id=123456789\">us</a>"
+    bot.send_message(user_id, "If you find a bug or know how to improve the code, write to us. " + user_id, parse_mode = html)
 
 @bot.message_handler(commands = ['start'])
 def handle_text(message):
@@ -303,12 +304,5 @@ def call_back_payment(call):
 ################################################################################################################
 
 print(bot.get_me())
-
-def log(message, answer):
-    print("\n ------")
-    from datetime import datetime
-    print(datetime.now())
-    print("Сообщение от {0} {1}. (id = {2}) \n Текст - {3})" . format(message.from_user.first_name, message.from_user.last_name, str(message.from_user.id), message.text))
-    print(answer)
 
 bot.polling(none_stop = True, interval = 0)
