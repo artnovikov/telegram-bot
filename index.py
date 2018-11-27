@@ -15,7 +15,7 @@ def download_lab(number_of_lab, number_of_variant, google_link, user_id):
     bot.send_chat_action(user_id, "upload_document")
     bot.send_document(user_id, document)
     document.close()
-    bot.send_message(user_id, "<a href=\"tg://user?id=438890135\">us</a>", parse_mode = HTML)
+    bot.send_message(user_id, "<a href=\"tg://user?id=438890135\">us</a>", parse_mode = "HTML")
 
 @bot.message_handler(commands = ['start'])
 def handle_text(message):
