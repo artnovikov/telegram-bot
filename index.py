@@ -38,7 +38,6 @@ def handle_text(message):
         hide_markup = telebot.types.ReplyKeyboardRemove()
         bot.send_message(message.from_user.id, "Thank you for using our bot...", reply_markup = hide_markup)
     elif message.text == "Help":
-        hide_markup = telebot.types.ReplyKeyboardRemove()
         bot.send_message(message.from_user.id, "Choose your variant. Download and unzip the archive on your desktop. Run the \"Project1.sln\" file. Enjoy.", reply_markup = hide_markup)
     elif message.text == "Lab 01":
         markup = telebot.types.InlineKeyboardMarkup()
@@ -109,14 +108,14 @@ def handle_text(message):
     elif message.text == "Lab 06":
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 01", callback_data="lab_06_variant_01"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 02", callback_data="lab_06_variant_02"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 03", callback_data="lab_06_variant_03"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 04", callback_data="lab_06_variant_04"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 02", callback_data="lab_06_variant_02"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 03", callback_data="lab_06_variant_03"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 04", callback_data="lab_06_variant_04"))
 
-        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 05", callback_data="lab_06_variant_05"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 06", callback_data="lab_06_variant_06"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 07", callback_data="lab_06_variant_07"))
-        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 08", callback_data="lab_06_variant_08"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 05", callback_data="lab_06_variant_05"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 06", callback_data="lab_06_variant_06"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 07", callback_data="lab_06_variant_07"))
+        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 08", callback_data="lab_06_variant_08"))
         bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
 
 ################################################################################################################
@@ -275,7 +274,7 @@ def call_back_payment(call):
     # Lab 06
     # Lab 06/Variant 01
     elif call.data == "lab_06_variant_01":
-        download_lab("06", "01", "14KuONQjrXgvgAqjuaPkl1vfK1hmsVB2r", call.from_user.id)
+        download_lab("06", "01", "1YHHG7ypgZHkZdcZOkrRHmHzLxOktYSF1", call.from_user.id)
     # Lab 06/Variant 02
     elif call.data == "lab_06_variant_02":
         download_lab("06", "02", "1MnBaCTC-zhATKcsn24mP2Ix7hCIOXH6q", call.from_user.id)
