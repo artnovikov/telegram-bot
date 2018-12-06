@@ -108,14 +108,14 @@ def handle_text(message):
     elif message.text == "Lab 06":
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 01", callback_data="lab_06_variant_01"))
-        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 02", callback_data="lab_06_variant_02"))
-        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 03", callback_data="lab_06_variant_03"))
-        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 04", callback_data="lab_06_variant_04"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 02", callback_data="lab_06_variant_02"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 03", callback_data="lab_06_variant_03"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 04", callback_data="lab_06_variant_04"))
 
-        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 05", callback_data="lab_06_variant_05"))
-        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 06", callback_data="lab_06_variant_06"))
-        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 07", callback_data="lab_06_variant_07"))
-        #markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 08", callback_data="lab_06_variant_08"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 05", callback_data="lab_06_variant_05"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 06", callback_data="lab_06_variant_06"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 07", callback_data="lab_06_variant_07"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 08", callback_data="lab_06_variant_08"))
         bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
 
 ################################################################################################################
@@ -277,25 +277,25 @@ def call_back_payment(call):
         download_lab("06", "01", "1YHHG7ypgZHkZdcZOkrRHmHzLxOktYSF1", call.from_user.id)
     # Lab 06/Variant 02
     elif call.data == "lab_06_variant_02":
-        download_lab("06", "02", "1MnBaCTC-zhATKcsn24mP2Ix7hCIOXH6q", call.from_user.id)
+        download_lab("06", "02", "1EeQo-o60dmxiZWaYo_sFXnaQBa2QpSNz", call.from_user.id)
     # Lab 06/Variant 03
     elif call.data == "lab_06_variant_03":
-        download_lab("06", "03", "1jynJp0seyZwEYxzbRIAxe_8FNlq0jwr3", call.from_user.id)
+        download_lab("06", "03", "1Hyo7IrQoXlm7F7PNVmsyCilzKxN5BfDP", call.from_user.id)
     # Lab 06/Variant 04
     elif call.data == "lab_06_variant_04":
-        download_lab("06", "04", "1vrXZYJSL9l5trnz8xEaWv-T2W461_reP", call.from_user.id)
+        download_lab("06", "04", "1-Op-Sp4VL3eD-z3HDxLAm7CnCbfkPmxP", call.from_user.id)
     # Lab 06/Variant 05
     elif call.data == "lab_06_variant_05":
-        download_lab("06", "05", "1sy5pLq5JGK9cyozB0QUOaXku7C_yw_nb", call.from_user.id)
+        download_lab("06", "05", "1alSo8jW78WqM4k8AX1Xt9saHSv9GnFMZ", call.from_user.id)
     # Lab 06/Variant 06
     elif call.data == "lab_06_variant_06":
-        download_lab("06", "06", "1u07xJhnfiR2mVWKYfUL5GYUzzAIoGsTa", call.from_user.id)
+        download_lab("06", "06", "18VYo5Yc1eqL_O02SqgVfHsEp8gnPy-WD", call.from_user.id)
     # Lab 06/Variant 07
     elif call.data == "lab_06_variant_07":
-        download_lab("06", "07", "1p-t7uXw68mU9k9q3UIWlHeroUbbURJGW", call.from_user.id)
+        download_lab("06", "07", "1SoWccjrGyJdqtSCNnDveZhGXXMMcPFxL", call.from_user.id)
     # Lab 06/Variant 08
     elif call.data == "lab_06_variant_08":
-        download_lab("06", "08", "1RZqcI1KOzc459_pWiCQoTjsz1UTCUO_u", call.from_user.id)
+        download_lab("06", "08", "1F14kKVhTuVlxAS0Q-tBKvWVp45JjEZW8", call.from_user.id)
 
 ################################################################################################################
 ################################################################################################################
