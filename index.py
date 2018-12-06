@@ -20,12 +20,9 @@ def download_lab(number_of_lab, number_of_variant, google_link, user_id):
 @bot.message_handler(commands = ['start'])
 def handle_text(message):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
-    user_markup.row("Exit")
-    user_markup.row("Help")
-    user_markup.row("Lab 01")
-    user_markup.row("Lab 02")
-    user_markup.row("Lab 05")
-    user_markup.row("Lab 06")
+    user_markup.row("Exit", "Help")
+    user_markup.row("Lab 01", "Lab 02")
+    user_markup.row("Lab 05", "Lab 06")
     bot.send_message(message.from_user.id, "Hello, we're glad to c u. Please choose lab number.", reply_markup = user_markup)
 
 ################################################################################################################
