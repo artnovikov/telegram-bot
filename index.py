@@ -113,6 +113,16 @@ def handle_text(message):
         markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 06", callback_data="lab_06_variant_06"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 07", callback_data="lab_06_variant_07"))
         markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 08", callback_data="lab_06_variant_08"))
+
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 09", callback_data="lab_06_variant_09"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 10", callback_data="lab_06_variant_10"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 11", callback_data="lab_06_variant_11"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 12", callback_data="lab_06_variant_12"))
+
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 13", callback_data="lab_06_variant_13"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 14", callback_data="lab_06_variant_14"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 15", callback_data="lab_06_variant_15"))
+        markup.add(telebot.types.InlineKeyboardButton("Lab 06/Variant 16", callback_data="lab_06_variant_16"))
         bot.send_message(message.from_user.id, "Choose your variant", reply_markup = markup)
 
 ################################################################################################################
@@ -293,6 +303,31 @@ def call_back_payment(call):
     # Lab 06/Variant 08
     elif call.data == "lab_06_variant_08":
         download_lab("06", "08", "1F14kKVhTuVlxAS0Q-tBKvWVp45JjEZW8", call.from_user.id)
+    # Lab 06/Variant 09
+    elif call.data == "lab_06_variant_09":
+        download_lab("06", "09", "13DrDxgOfBLIsB7GRKunwjblHldU4xlb6", call.from_user.id)
+    # Lab 06/Variant 10
+    elif call.data == "lab_06_variant_10":
+        download_lab("06", "10", "1QQMIDrPXdg163r_dcf1Tojb-gz13-qp8", call.from_user.id)
+    # Lab 06/Variant 11
+    elif call.data == "lab_06_variant_11":
+        download_lab("06", "11", "1JAuF3ZT21nnKd3RSoMwvIlr4NkUNNJbg", call.from_user.id)
+    # Lab 06/Variant 12
+    elif call.data == "lab_06_variant_12":
+        download_lab("06", "12", "1A_sAKTRuxAgaqyBck9EJyf4TxxRx1ENX", call.from_user.id)
+    # Lab 06/Variant 13
+    elif call.data == "lab_06_variant_13":
+        download_lab("06", "13", "1Ylcun37jo9JSD7_TV-NtiPiAnPHMdNfC", call.from_user.id)
+    # Lab 06/Variant 14
+    elif call.data == "lab_06_variant_14":
+        download_lab("06", "14", "1DYsKKa5Hgs2G318wHDXehITB8IM-nxLi", call.from_user.id)
+    # Lab 06/Variant 15
+    elif call.data == "lab_06_variant_15":
+        download_lab("06", "15", "1vPx111h5k3NiD1Lo-CNMsNHyDCxX8OiF", call.from_user.id)
+    # Lab 06/Variant 16
+    elif call.data == "lab_06_variant_16":
+        download_lab("06", "16", "1E8t793gZtgquoQAueloqHiY85lgm55BJ", call.from_user.id)
+
 
 ################################################################################################################
 ################################################################################################################
