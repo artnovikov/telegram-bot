@@ -262,7 +262,7 @@ def call_back_payment(call):
         download_lab("05", "10", "1R34OjbJmZVYHvSfrRINbHSzm_STl8b9-", call.from_user.id)
     # Lab 05/Variant 11
     elif call.data == "lab_05_variant_11":
-        download_lab("05", "11", "1pHh-dfUNtVxntQFs41-jRf5uyblGx59D", call.from_user.id)
+        download_lab("05", "11", "146ciLm9nCVy1WbbIPpt81vDD8Xf5Wayr", call.from_user.id)
     # Lab 05/Variant 12
     elif call.data == "lab_05_variant_12":
         download_lab("05", "12", "1Z4dS3DZnBKUeniaYWzl6DOtx32UDfIsU", call.from_user.id)
